@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stripclub.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @stripclub.location %>
+</p>
+
+<p>
+  <strong>Female dancers:</strong>
+  <%= @stripclub.female_dancers %>
+</p>
+
+<p>
+  <strong>Male dancers:</strong>
+  <%= @stripclub.male_dancers %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @stripclub.phone_number %>
+</p>
+
+<p>
+  <strong>Music:</strong>
+  <%= @stripclub.music %>
+</p>
+
+<%= link_to 'Edit', edit_stripclub_path(@stripclub) %> |
+<%= link_to 'Back', stripclubs_path %>
+
+<%= render "reviews/form" %>
+
+<ul>
+<% @stripclub.reviews.each do |review| %>
+  <li> <%= review.rating %> - <%= review.content%></li>
+<%end%>
+</ul>
+
+
+
+
+

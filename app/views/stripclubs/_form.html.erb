@@ -1,0 +1,16 @@
+<%= simple_form_for(@stripclub) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :female_dancers %>
+    <%= f.input :male_dancers %>
+    <%= f.input :phone_number %>
+    <%= f.input :music %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
